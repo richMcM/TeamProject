@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane maxWidth="1.7976931348623157E308" prefHeight="80.0" prefWidth="1000.0" style="-fx-border-color: #248ef8; -fx-border-width: .02em; -fx-border-insets: .8em;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quotedecor.view_companies.CompanyListItemCtrl">
+   <stylesheets>
+      <URL value="@../css/bootstrapfx.css" />
+      <URL value="@../css/global.css" />
+   </stylesheets>
+   <children>
+      <GridPane layoutX="193.0" layoutY="19.0" prefHeight="42.0" prefWidth="615.0">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblCompanyName" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ebf0fa; -fx-border-color: #248ef8; -fx-border-width: .02em;" text="COMPANY NAME" textAlignment="CENTER" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+            <Label fx:id="lblLastReview" alignment="CENTER" layoutX="65.0" layoutY="23.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ebf0fa; -fx-border-color: #248ef8; -fx-border-width: .02em;" text="LAST REVIEW" textAlignment="CENTER" GridPane.columnIndex="1" />
+            <Label fx:id="lblRating" alignment="CENTER" layoutX="314.0" layoutY="23.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" style="-fx-background-color: #ebf0fa; -fx-border-color: #248ef8; -fx-border-width: .02em;" text="0" textAlignment="CENTER" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

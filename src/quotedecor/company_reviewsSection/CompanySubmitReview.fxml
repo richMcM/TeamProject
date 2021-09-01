@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quotedecor.company_reviewsSection.CompanyReviewUICtrl">
+    <children>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+        <ScrollPane layoutX="-3.0" layoutY="-2.0" prefHeight="606.0" prefWidth="1206.0">
+            <content>
+                <HBox prefHeight="186.0" prefWidth="1206.0">
+                    <children>
+                        <GridPane alignment="TOP_CENTER" hgap="20.0" maxWidth="1206.0" minWidth="-Infinity" prefHeight="186.0" prefWidth="1191.0">
+                            <columnConstraints>
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="188.00000762939453" minWidth="10.0" prefWidth="138.40003662109373" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="490.6000244140625" minWidth="10.0" prefWidth="359.1999633789062" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="536.0" minWidth="10.0" prefWidth="142.39992675781252" />
+                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.4000244140625" minWidth="0.0" prefWidth="432.00007324218757" />
+                            </columnConstraints>
+                            <rowConstraints>
+                                <RowConstraints maxHeight="88.5999969482422" minHeight="10.0" prefHeight="63.00000610351563" vgrow="SOMETIMES" />
+                                <RowConstraints maxHeight="139.79999008178714" minHeight="10.0" prefHeight="123.7999938964844" vgrow="SOMETIMES" />
+                            </rowConstraints>
+                            <children>
+                                <TextArea fx:id="txt_UserReview" prefHeight="124.0" prefWidth="350.0" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.rowSpan="2147483647" />
+                                <Button fx:id="btn_submitReview" mnemonicParsing="false" onAction="#submitReview" prefHeight="21.0" prefWidth="115.0" text="Submit Review" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                           <GridPane.margin>
+                              <Insets left="50.0" />
+                           </GridPane.margin></Button>
+                                <ComboBox fx:id="comRating" prefHeight="26.0" prefWidth="126.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="TOP">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+
+                                            <String fx:value="1" />
+                                            <String fx:value="2" />
+                                            <String fx:value="3" />
+                                            <String fx:value="4" />
+                                            <String fx:value="5" />
+
+                                        </FXCollections>
+                                    </items>
+                                    <value>
+                                        <String fx:value="1" />
+                                    </value>
+
+                                </ComboBox>
+                                <Label alignment="CENTER" contentDisplay="TEXT_ONLY" prefHeight="35.0" prefWidth="122.0" text="Customer ID:" textAlignment="CENTER" textFill="#0076ff">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" contentDisplay="TEXT_ONLY" prefHeight="35.0" prefWidth="122.0" text="Review Content" textFill="#0076ff" GridPane.columnIndex="1">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                                <Label alignment="CENTER" contentDisplay="TEXT_ONLY" prefHeight="35.0" prefWidth="122.0" text="Rating" textFill="#0076ff" GridPane.columnIndex="2">
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                </Label>
+                        <TextField fx:id="txt_customerId" GridPane.rowIndex="1" />
+                            </children>
+                        </GridPane>
+                    </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+                </HBox>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quotedecor.controllers.SelectUserUICtrl">
+    <children>
+        <VBox prefHeight="600.0" prefWidth="1200.0">
+            <children>
+                <GridPane maxHeight="75.0" minHeight="75.0" prefHeight="75.0" prefWidth="1200.0" styleClass="backgroud-color-blue">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="1206.0" styleClass="header" text="QuoteDecor" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" GridPane.columnIndex="1">
+                            <font>
+                                <Font name="Haettenschweiler" size="50.0" />
+                            </font>
+                        </Label>
+                        <Button alignment="CENTER" focusTraversable="false" mnemonicParsing="false" onAction="#showLoginUI" prefHeight="75.0" styleClass="btn-header">
+                            <padding>
+                                <Insets left="20.0" />
+                            </padding>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                    </children>
+                </GridPane>
+                <Label fx:id="lblWelcome" alignment="CENTER" contentDisplay="CENTER" prefHeight="154.0" prefWidth="1200.0" styleClass="sub-header" />
+                <GridPane maxHeight="-Infinity" prefHeight="242.0" prefWidth="1202.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="388.0" minWidth="110.0" prefWidth="325.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="490.0" minWidth="211.0" prefWidth="276.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="438.0" minWidth="235.0" prefWidth="273.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints maxHeight="181.0" minHeight="0.0" prefHeight="28.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="181.0" minHeight="0.0" prefHeight="59.0" vgrow="ALWAYS" />
+                  <RowConstraints maxHeight="181.0" minHeight="10.0" prefHeight="59.0" vgrow="ALWAYS" />
+                    </rowConstraints>
+                    <children>
+                        <Button focusTraversable="false" maxHeight="72.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="72.0" prefWidth="425.0" style="text: #248ef8;" text="SET COSTS NOW" textFill="#248ef8" GridPane.columnIndex="1">
+                            <font>
+                                <Font name="Agency FB" size="36.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="welcome-buttons" />
+                                <String fx:value="middle" />
+                            </styleClass>
+                            <graphic>
+                                <FontAwesomeIcon id="iconA" glyphName="EURO" onDragDetected="#showCustomerCreateAccUI" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="52.285715103149414">
+                                    <styleClass>
+                                        <String fx:value="welcome-buttons" />
+                                        <String fx:value="fa" />
+                                    </styleClass>
+                                </FontAwesomeIcon>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                        <Button focusTraversable="false" layoutX="10.0" layoutY="107.0" maxHeight="72.0" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#showCompanyHomeUI" prefHeight="72.0" prefWidth="426.0" text="SET COST LATER" textFill="#248ef8" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="1">
+                            <font>
+                                <Font name="Haettenschweiler" size="36.0" />
+                            </font>
+                            <styleClass>
+                                <String fx:value="middle" />
+                                <String fx:value="welcome-buttons" />
+                            </styleClass>
+                            <graphic>
+                                <FontAwesomeIcon id="iconB" glyphName="EURO" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="54.0">
+                                    <styleClass>
+                                        <String fx:value="welcome-buttons" />
+                                        <String fx:value="fa" />
+                                    </styleClass>
+                                </FontAwesomeIcon>
+                            </graphic>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                        </Button>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="91.0" prefWidth="1069.0" text="** Please note! You will not be part of the quotation system until you specify your labour costs!  **" wrapText="true" GridPane.columnSpan="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+                    </children>
+                </GridPane>
+            </children>
+        </VBox>
+    </children>
+    <stylesheets>
+        <URL value="@../css/bootstrapfx.css" />
+        <URL value="@../css/global.css" />
+    </stylesheets>
+</AnchorPane>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="37.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quotedecor.quotesystem.QuoteListItemHeaderCtrl">
+  <columnConstraints>
+      <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" maxWidth="192.0" minWidth="10.0" prefWidth="72.0" />
+    <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="286.0" minWidth="10.0" prefWidth="204.0" />
+      <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" maxWidth="162.0" minWidth="10.0" prefWidth="79.0" />
+    <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="SOMETIMES" maxWidth="268.0" minWidth="10.0" prefWidth="207.0" />
+      <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="253.0" minWidth="10.0" prefWidth="150.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="btnAccept" mnemonicParsing="false" prefHeight="25.0" prefWidth="98.0" text="ACCEPT" GridPane.columnIndex="4">
+         <styleClass>
+            <String fx:value="success" />
+            <String fx:value="middle" />
+         </styleClass>
+         <GridPane.margin>
+            <Insets right="7.5" />
+         </GridPane.margin>
+      </Button>
+      <TextField fx:id="tfCompany" editable="false" focusTraversable="false" prefHeight="25.0" prefWidth="144.0" styleClass="middle" GridPane.columnIndex="1" GridPane.hgrow="NEVER" />
+      <TextField fx:id="tfPrice" editable="false" focusTraversable="false" layoutX="36.0" layoutY="27.0" prefHeight="25.0" prefWidth="71.0" styleClass="middle" GridPane.columnIndex="3" />
+      <Label prefHeight="17.0" prefWidth="54.0" text="QUOTE €:" GridPane.columnIndex="2" />
+      <Label layoutX="382.0" layoutY="20.0" prefHeight="17.0" prefWidth="64.0" text="COMPANY: " />
+   </children>
+   <stylesheets>
+      <URL value="@../css/bootstrapfx.css" />
+      <URL value="@../css/global.css" />
+   </stylesheets>
+</GridPane>

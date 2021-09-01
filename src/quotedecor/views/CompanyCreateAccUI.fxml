@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quotedecor.controllers.CompanyCreateAccCtrl">
+    <children>
+        <GridPane maxHeight="75.0" minHeight="75.0" prefHeight="75.0" prefWidth="1200.0" styleClass="backgroud-color-blue">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="1206.0" styleClass="header" text="QuoteDecor" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" GridPane.columnIndex="1">
+                    <font>
+                        <Font name="Haettenschweiler" size="50.0" />
+                    </font>
+                </Label>
+                <Button alignment="CENTER" focusTraversable="false" mnemonicParsing="false" onAction="#showSelectUserUI">
+                    <graphic>
+                        <FontAwesomeIcon fill="WHITE" glyphName="ARROW_LEFT" size="2em" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="55.0">
+                            <styleClass>
+                                <String fx:value="btn-header-icon" />
+                                <String fx:value="backgroud-color-blue" />
+                            </styleClass></FontAwesomeIcon>
+                    </graphic>
+                    <padding>
+                        <Insets left="20.0" />
+                    </padding>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <styleClass>
+                        <String fx:value="btn-header" />
+                        <String fx:value="btn-header" />
+                    </styleClass></Button>
+            </children>
+        </GridPane>
+      <GridPane layoutX="402.0" layoutY="153.0" prefHeight="330.0" prefWidth="400.0">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="247.0" minWidth="41.0" prefWidth="112.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="338.0" minWidth="173.0" prefWidth="243.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="247.0" minWidth="29.0" prefWidth="47.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="43.0" minHeight="10.0" prefHeight="43.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="41.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="txfEmail" promptText="Email" styleClass="middle" GridPane.columnIndex="1" />
+            <PasswordField fx:id="psfPassword" promptText="Password" styleClass="middle" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="tfCompanyName" onKeyTyped="#clearLblCompanyNameError" promptText="Company name" styleClass="middle" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="tfContactName" onKeyTyped="#clearLblContactNameError" prefWidth="322.0" promptText="Contacts name" styleClass="middle" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="txfApartmentNo" promptText="Apt/House no." styleClass="middle" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txfAddress1" promptText="Street" styleClass="middle" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="txfTown" promptText="Town" styleClass="middle" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <TextField fx:id="txfCounty" promptText="County" styleClass="middle" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <TextField editable="false" focusTraversable="false" prefWidth="78.0" styleClass="middle" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <FontAwesomeIcon fill="#248ef8" glyphName="PAINT_BRUSH" size="1.3em" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <TextField editable="false" focusTraversable="false" layoutX="10.0" layoutY="16.0" prefWidth="78.0" styleClass="middle" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <FontAwesomeIcon fill="#248ef8" glyphName="USER" layoutX="25.0" layoutY="35.0" size="1.3em" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <TextField editable="false" focusTraversable="false" layoutX="10.0" layoutY="58.0" prefWidth="78.0" styleClass="middle" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <FontAwesomeIcon fill="#248ef8" glyphName="HOME" layoutX="25.0" layoutY="77.0" size="1.3em" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <TextField editable="false" focusTraversable="false" layoutX="10.0" layoutY="100.0" prefWidth="78.0" styleClass="middle" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <FontAwesomeIcon fill="#248ef8" glyphName="HOME" layoutX="25.0" layoutY="119.0" size="1.3em" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+            <TextField editable="false" focusTraversable="false" layoutX="10.0" layoutY="141.0" prefWidth="78.0" styleClass="middle" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <FontAwesomeIcon fill="#248ef8" glyphName="HOME" layoutX="25.0" layoutY="160.0" size="1.3em" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+            <TextField editable="false" focusTraversable="false" layoutX="10.0" layoutY="182.0" prefWidth="78.0" styleClass="middle" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <FontAwesomeIcon fill="#248ef8" glyphName="HOME" layoutX="25.0" layoutY="201.0" size="1.3em" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+            <TextField editable="false" focusTraversable="false" layoutX="10.0" layoutY="223.0" prefWidth="78.0" styleClass="middle" GridPane.columnIndex="2" />
+            <FontAwesomeIcon fill="#248ef8" glyphName="AT" layoutX="25.0" layoutY="242.0" size="1.3em" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" />
+            <TextField editable="false" focusTraversable="false" layoutX="10.0" layoutY="264.0" prefWidth="78.0" styleClass="middle" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <FontAwesomeIcon fill="#248ef8" glyphName="LOCK" layoutX="25.0" layoutY="283.0" size="1.3em" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <TextField alignment="CENTER_RIGHT" editable="false" focusTraversable="false" text="Company Name:" GridPane.rowIndex="2">
+               <styleClass>
+                  <String fx:value="middle" />
+                  <String fx:value="text-fill-blue" />
+               </styleClass>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="10.0" layoutY="16.0" text="Contacts Name:" GridPane.rowIndex="3">
+               <styleClass>
+                  <String fx:value="middle" />
+                  <String fx:value="text-fill-blue" />
+               </styleClass>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="10.0" layoutY="58.0" text="Apt/House No:" GridPane.rowIndex="4">
+               <styleClass>
+                  <String fx:value="middle" />
+                  <String fx:value="text-fill-blue" />
+               </styleClass>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="10.0" layoutY="100.0" text="Street:" GridPane.rowIndex="5">
+               <styleClass>
+                  <String fx:value="middle" />
+                  <String fx:value="text-fill-blue" />
+               </styleClass>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="10.0" layoutY="141.0" text="Town:" GridPane.rowIndex="6">
+               <styleClass>
+                  <String fx:value="middle" />
+                  <String fx:value="text-fill-blue" />
+               </styleClass>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="10.0" layoutY="182.0" text="County:" GridPane.rowIndex="7">
+               <styleClass>
+                  <String fx:value="middle" />
+                  <String fx:value="text-fill-blue" />
+               </styleClass>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="10.0" layoutY="223.0" text="Email:">
+               <styleClass>
+                  <String fx:value="middle" />
+                  <String fx:value="text-fill-blue" />
+               </styleClass>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+            <TextField alignment="CENTER_RIGHT" editable="false" focusTraversable="false" layoutX="10.0" layoutY="264.0" text="Password:" GridPane.rowIndex="1">
+               <styleClass>
+                  <String fx:value="middle" />
+                  <String fx:value="text-fill-blue" />
+               </styleClass>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </GridPane>
+      <Button layoutX="506.0" layoutY="499.0" mnemonicParsing="false" onAction="#doCreateAccount" prefHeight="32.0" prefWidth="188.0" styleClass="middle" text="Join" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="468.0" layoutY="114.0" styleClass="sub-header" text="Register as a Decorating Company:" textFill="#538ac5">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCompanyNameError" layoutX="764.0" layoutY="168.0" prefHeight="17.0" prefWidth="132.0" />
+      <Label fx:id="lblHouseNoError" layoutX="764.0" layoutY="251.0" prefHeight="17.0" prefWidth="132.0" />
+      <Label fx:id="lblContactNameError" layoutX="764.0" layoutY="211.0" prefHeight="17.0" prefWidth="132.0" />
+      <Label fx:id="lblStreetError" layoutX="764.0" layoutY="292.0" prefHeight="17.0" prefWidth="132.0" />
+      <Label fx:id="lblTownError" layoutX="764.0" layoutY="332.0" prefHeight="17.0" prefWidth="132.0" />
+      <Label fx:id="lblCountyError" layoutX="764.0" layoutY="375.0" prefHeight="17.0" prefWidth="132.0" />
+      <Label fx:id="lblEmailError" layoutX="764.0" layoutY="415.0" prefHeight="17.0" prefWidth="132.0" />
+      <Label fx:id="lblPasswordError" layoutX="764.0" layoutY="455.0" prefHeight="17.0" prefWidth="132.0" />
+      <Button fx:id="btnLogin" layoutX="881.0" layoutY="409.0" mnemonicParsing="false" onAction="#showLoginUI" styleClass="link-text" />
+    </children>
+    <stylesheets>
+        <URL value="@../css/bootstrapfx.css" />
+        <URL value="@../css/global.css" />
+    </stylesheets>
+</AnchorPane>

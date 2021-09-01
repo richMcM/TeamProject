@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.ScrollPane?>
+
+<ScrollPane hbarPolicy="NEVER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefWidth="750.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quotedecor.quotesystem.QuotesListDialogCtrl">
+  <content>
+<!--    <AnchorPane minHeight="0.0" minWidth="-Infinity" prefHeight="510.0" prefWidth="710.0">-->
+<!--         <children>-->
+            <Accordion fx:id="accordionQuoteList" maxWidth="-Infinity" prefWidth="748.0">
+               <padding>
+                  <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
+               </padding></Accordion>
+<!--         </children>-->
+<!--         <padding>-->
+<!--            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />-->
+<!--         </padding>-->
+<!--  </AnchorPane>-->
+  </content>
+</ScrollPane>

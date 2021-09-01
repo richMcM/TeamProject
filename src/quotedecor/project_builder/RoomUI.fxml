@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="80.0" prefWidth="1000.0" style="-fx-border-color: #248ef8; -fx-border-width: .02em; -fx-border-insets: .8em;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quotedecor.project_builder.RoomCtrl">
+    <stylesheets>
+        <URL value="@../css/bootstrapfx.css" />
+        <URL value="@../css/global.css" />
+    </stylesheets>
+    <children>
+      <GridPane hgap="5.0" layoutX="96.0" layoutY="16.0" prefHeight="49.0" prefWidth="916.0" AnchorPane.rightAnchor="32.0">
+        <columnConstraints>
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="98.0" minWidth="10.0" prefWidth="98.0" />
+          <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" maxWidth="80.0" minWidth="10.0" prefWidth="72.0" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label fx:id="lblTitle" text="TITLE" GridPane.columnIndex="1" />
+            <TextField fx:id="txtRoomTitle" prefHeight="25.0" prefWidth="110.0" style="-fx-border-color: #cccccc;" GridPane.columnIndex="2" />
+            <Label fx:id="lblWidth" layoutX="258.0" layoutY="23.0" text="WIDTH (M)" GridPane.columnIndex="3" />
+            <TextField fx:id="txtRoomWidth" prefHeight="10.0" prefWidth="62.0" GridPane.columnIndex="4" />
+            <Label fx:id="lblLength" layoutX="441.0" layoutY="23.0" text="LENGTH" GridPane.columnIndex="5" />
+            <TextField fx:id="txtRoomLength" layoutX="426.0" layoutY="62.0" prefHeight="10.0" prefWidth="62.0" GridPane.columnIndex="6" />
+            <Label fx:id="lblRoom" text="ROOM" textFill="#248ef8">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnDeleteRoom" mnemonicParsing="false" style="-fx-border-radius: 100;" text="X" textFill="RED" GridPane.columnIndex="9">
+               <styleClass>
+                  <String fx:value="button" />
+                  <String fx:value="danger" />
+               </styleClass></Button>
+            <Label text="CEILINGS" GridPane.columnIndex="7" />
+            <CheckBox fx:id="ckbCeilings" mnemonicParsing="false" prefHeight="19.0" prefWidth="70.0" GridPane.columnIndex="8" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

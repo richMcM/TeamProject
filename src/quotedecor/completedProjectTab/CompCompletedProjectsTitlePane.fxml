@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<TitledPane fx:id="Lbl_projectID" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="0.0" maxHeight="600" maxWidth="1200" prefHeight="445.0" prefWidth="1145.0" stylesheets="@../css/bootstrapfx.css" text="untitled 1" textAlignment="CENTER" textFill="#797979" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quotedecor.completedProjectTab.CompCompletedProjectsTitlePaneCtrl">
+    <content>
+        <AnchorPane maxWidth="1.7976931348623157E308" minHeight="0.0" minWidth="0.0" prefHeight="406.0" prefWidth="1014.0">
+            <children>
+                <GridPane layoutX="59.0" layoutY="17.0" prefHeight="183.0" prefWidth="902.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="364.4000244140625" minWidth="10.0" prefWidth="264.8" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="636.0" minWidth="10.0" prefWidth="636.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label fx:id="lbl_customerID" prefHeight="41.0" prefWidth="643.0" textFill="#797777" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lbl_projectName" prefHeight="41.0" prefWidth="639.0" textFill="#797777" GridPane.columnIndex="1">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="41.0" prefWidth="367.0" text="Project Name:">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="41.0" prefWidth="369.0" text="Customer Email:" GridPane.rowIndex="1">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="41.0" prefWidth="368.0" text="Price:" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="41.0" prefWidth="366.0" text="Customer Address:" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lbl_Price" prefHeight="41.0" prefWidth="642.0" textFill="#797777" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lbl_Address" prefHeight="41.0" prefWidth="642.0" textFill="#797777" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                        <Label prefHeight="41.0" prefWidth="368.0" text="No. of Rooms:" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                        <Label fx:id="lbl_NoOfRooms" prefHeight="32.0" prefWidth="640.0" textFill="#797777" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                            <font>
+                                <Font size="18.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </GridPane>
+                <Button fx:id="" alignment="CENTER" layoutX="769.0" layoutY="209.0" mnemonicParsing="false" onAction="#openCustomerReviewWindow" prefHeight="32.0" prefWidth="190.0" text="Leave Customer Review" />
+            </children>
+            <stylesheets>
+                <URL value="@../css/bootstrapfx.css" />
+                <URL value="@../css/global.css" />
+            </stylesheets></AnchorPane>
+    </content>
+    <graphic>
+        <HBox prefHeight="30.0" prefWidth="1026.0">
+            <children>
+                <Label fx:id="lbl_NoProjectsMessage" prefHeight="30.0" prefWidth="568.0" textFill="#fa0606" />
+                <Region HBox.hgrow="ALWAYS" />
+                <Label fx:id="lbl_ConfirmedProject" prefHeight="30.0" prefWidth="158.0" text="PROJECT COMPLETED" textFill="GOLDENROD" />
+            </children>
+        </HBox>
+    </graphic>
+    <font>
+        <Font size="17.0" />
+    </font>
+</TitledPane>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="66.0" prefWidth="1100.0" style="-fx-border-color: #248ef8; -fx-border-width: .02em; -fx-background-color: #E8E8E8;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quotedecor.customer_quotes_tab.AcceptedQuotesListItemCtrl">
+  <columnConstraints>
+      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="392.0" minWidth="10.0" prefWidth="243.0" />
+      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" maxWidth="392.0" minWidth="10.0" prefWidth="229.0" />
+    <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="392.0" minWidth="10.0" prefWidth="216.0" />
+    <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="649.0" minWidth="10.0" prefWidth="191.0" />
+      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="662.0" minWidth="10.0" prefWidth="224.0" />
+      <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" maxWidth="282.0" minWidth="0.0" prefWidth="57.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <stylesheets>
+      <URL value="@../css/bootstrapfx.css" />
+      <URL value="@../css/global.css" />
+   </stylesheets>
+   <children>
+      <Label fx:id="lblCompany" alignment="CENTER" prefHeight="46.0" prefWidth="241.0" style="-fx-background-color: #fff;" text="COMPANY" textAlignment="CENTER" GridPane.columnIndex="2">
+         <font>
+            <Font name="System Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblQuotePrice" alignment="CENTER" layoutX="44.0" layoutY="20.0" prefHeight="46.0" prefWidth="153.0" style="-fx-background-color: #fff;" text="€250" textAlignment="CENTER" GridPane.columnIndex="3">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblConfirmed" alignment="CENTER" layoutX="310.0" layoutY="20.0" prefHeight="46.0" prefWidth="200.0" style="-fx-background-color: #fff; -fx-text-fill: orange;" text="PENDING CONFIRMATION" textAlignment="CENTER" textFill="#248ef8" GridPane.columnIndex="4">
+         <font>
+            <Font name="System Regular" size="12.0" />
+         </font>
+      </Label>
+      <GridPane fx:id="gpReviewOption" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="45.0" prefWidth="199.0" style="-fx-background-color: #fff;" visible="false" GridPane.columnIndex="4" GridPane.vgrow="NEVER">
+        <columnConstraints>
+          <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="125.0" minWidth="10.0" prefWidth="89.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="140.0" minWidth="10.0" prefWidth="110.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="45.0" prefWidth="77.0" style="-fx-background-color: #fff;" styleClass="success" text="CONFIRMED" textAlignment="CENTER" textFill="#2fc339">
+               <font>
+                  <Font name="System Regular" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnLeaveReview" minHeight="19.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="84.0" text=" REVIEW" GridPane.columnIndex="1">
+               <font>
+                  <Font size="2.0" />
+               </font>
+               <styleClass>
+                  <String fx:value="middle" />
+                  <String fx:value="button" />
+                  <String fx:value="sm" />
+                  <String fx:value="success" />
+               </styleClass>
+            </Button>
+         </children>
+      </GridPane>
+      <Button fx:id="btnDelete" mnemonicParsing="false" text="X" GridPane.columnIndex="5">
+         <styleClass>
+            <String fx:value="danger" />
+            <String fx:value="middle" />
+         </styleClass></Button>
+      <Label fx:id="lblProject" alignment="CENTER" layoutX="279.0" layoutY="20.0" prefHeight="46.0" prefWidth="207.0" style="-fx-background-color: #fff;" text="PROJECT" textAlignment="CENTER" GridPane.columnIndex="1">
+         <font>
+            <Font name="System Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblDate" alignment="CENTER" layoutX="228.0" layoutY="20.0" prefHeight="46.0" prefWidth="207.0" style="-fx-background-color: #fff;" text="DATE" textAlignment="CENTER">
+         <font>
+            <Font name="System Regular" size="14.0" />
+         </font>
+      </Label>
+   </children>
+   <opaqueInsets>
+      <Insets />
+   </opaqueInsets>
+</GridPane>

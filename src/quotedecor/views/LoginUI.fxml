@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quotedecor.controllers.LoginCtrl">
+   <stylesheets>
+      <URL value="@../css/bootstrapfx.css" />
+      <URL value="@../css/global.css" />
+   </stylesheets>
+      <Label fx:id="lblEmailError" layoutX="774.0" layoutY="257.0" prefHeight="17.0" prefWidth="208.0" styleClass="lbl-error-message" />
+      <Label fx:id="lblPasswordError" layoutX="774.0" layoutY="292.0" prefHeight="17.0" prefWidth="208.0" styleClass="lbl-error-message" />
+       <GridPane maxHeight="75.0" minHeight="75.0" prefHeight="75.0" prefWidth="1200.0" styleClass="backgroud-color-blue">
+           <columnConstraints>
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+               <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+           </columnConstraints>
+           <rowConstraints>
+               <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+           </rowConstraints>
+           <children>
+               <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="100.0" prefWidth="1206.0" styleClass="header" text="QuoteDecor" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" GridPane.columnIndex="1">
+                   <font>
+                       <Font name="Haettenschweiler" size="50.0" />
+                   </font>
+               </Label>
+           </children>
+       </GridPane>
+      <GridPane alignment="CENTER" layoutX="439.0" layoutY="209.0" prefHeight="180.0" prefWidth="322.0">
+        <columnConstraints>
+         <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="160.0" minWidth="10.0" prefWidth="77.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="270.0" minWidth="10.0" prefWidth="210.0" />
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="94.0" minWidth="10.0" prefWidth="41.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="40.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="44.0" minHeight="10.0" prefHeight="44.0" valignment="CENTER" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField editable="false" focusTraversable="false" styleClass="middle" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+         </TextField>
+            <TextField editable="false" focusTraversable="false" style="-fx-border-image-insets: 0;" styleClass="middle" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+         </TextField>
+            <FontAwesomeIcon fill="#248ef8" glyphName="AT" size="1.3em" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="info" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+            <FontAwesomeIcon fill="#248ef8" glyphName="LOCK" size="1.3em" strokeType="OUTSIDE" strokeWidth="0.0" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+            <TextField fx:id="txfEmail" onKeyTyped="#clearEmailError" promptText="Email" styleClass="middle" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField fx:id="psfPassword" onKeyTyped="#clearPasswordError" promptText="Password" styleClass="middle" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button fx:id="btnLogin" maxHeight="-Infinity" mnemonicParsing="false" onAction="#doLogin" prefHeight="15.0" prefWidth="123.0" styleClass="middle" text="Login" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets right="20.0" />
+            </GridPane.margin>
+         </Button>
+            <Button focusTraversable="false" mnemonicParsing="false" onAction="#showSelectUserUI" prefHeight="32.0" prefWidth="132.0" styleClass="link-text" text="Create an account?" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="4.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            <GridPane.margin>
+               <Insets right="20.0" />
+            </GridPane.margin>
+            </Button>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="153.0" styleClass="sub-header" text="Welcome! Login" textAlignment="CENTER" GridPane.columnIndex="1">
+            <GridPane.margin>
+               <Insets right="20.0" />
+            </GridPane.margin>
+         </Label>
+         <TextField alignment="CENTER_RIGHT" focusTraversable="false" text="Email:" GridPane.rowIndex="1">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+            <styleClass>
+               <String fx:value="text-fill-blue" />
+               <String fx:value="middle" />
+            </styleClass>
+         </TextField>
+         <TextField alignment="CENTER_RIGHT" focusTraversable="false" layoutX="10.0" layoutY="49.0" prefWidth="74.0" text="Password:" GridPane.rowIndex="2">
+            <font>
+               <Font name="System Bold" size="12.0" />
+            </font>
+            <styleClass>
+               <String fx:value="text-fill-blue" />
+               <String fx:value="middle" />
+            </styleClass>
+         </TextField>
+         </children>
+      </GridPane>
+
+</AnchorPane>

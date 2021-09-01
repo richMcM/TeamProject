@@ -1,0 +1,101 @@
+CREATE TABLE `company` (
+ `email` varchar(32) NOT NULL,
+ `password` varchar(64) NOT NULL,
+ `company_name` varchar(32) NOT NULL,
+ `contacts_name` varchar(16) NOT NULL,
+ `address` varchar(128) NOT NULL,
+ PRIMARY KEY (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+CREATE TABLE `customer` (
+ `email` varchar(32) NOT NULL,
+ `password` varchar(64) NOT NULL,
+ `forename` varchar(16) NOT NULL,
+ `surname` varchar(16) NOT NULL,
+ `address` varchar(128) NOT NULL,
+ PRIMARY KEY (`email`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+CREATE TABLE `door` (
+ `door_id` int(11) NOT NULL AUTO_INCREMENT,
+ `project_id` int(11) NOT NULL,
+ `type` varchar(8) NOT NULL,
+ `paned` tinyint(1) NOT NULL,
+ `current_state` varchar(8) NOT NULL,
+ `desired_finish` varchar(8) NOT NULL,
+ PRIMARY KEY (`door_id`),
+ KEY `FK` (`project_id`),
+ CONSTRAINT `door_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `project` (`project_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4
+
+CREATE TABLE `labour_costs` (
+ `company_id` varchar(32) NOT NULL,
+ `painting` decimal(4,2) NOT NULL,
+ `papering` decimal(4,2) NOT NULL,
+ `wall_prep` decimal(4,2) NOT NULL,
+ `wood_prep_bv2_paint` decimal(4,2) NOT NULL,
+ `wood_prep_bv2_varnish` decimal(4,2) NOT NULL,
+ `wood_prep_paint2_paint` decimal(4,2) NOT NULL,
+ PRIMARY KEY (`company_id`),
+ CONSTRAINT `labour_costs_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `company` (`email`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+CREATE TABLE `project` (
+ `project_id` int(11) NOT NULL AUTO_INCREMENT,
+ `customer_id` varchar(32) NOT NULL,
+ PRIMARY KEY (`project_id`),
+ KEY `FK` (`customer_id`),
+ CONSTRAINT `project_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`email`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4
+
+CREATE TABLE `quote` (
+ `quote_id` int(11) NOT NULL AUTO_INCREMENT,
+ `project_id` int(11) NOT NULL,
+ `company_id` varchar(32) NOT NULL,
+ `customer_id` varchar(32) NOT NULL,
+ `price` decimal(7,2) NOT NULL,
+ `customer_accepted` tinyint(1) NOT NULL,
+ `company_confirmed` tinyint(1) NOT NULL,
+ `customer_reviewed` tinyint(1) NOT NULL,
+ `company_reviewed` tinyint(1) NOT NULL,
+ PRIMARY KEY (`quote_id`),
+ KEY `FK-project` (`project_id`),
+ KEY `FK-company` (`company_id`),
+ KEY `FK-customer` (`customer_id`),
+ CONSTRAINT `quote_ibfk_1` FOREIGN KEY (`company_id`) REFERENCES `company` (`email`) ON DELETE CASCADE ON UPDATE CASCADE,
+ CONSTRAINT `quote_ibfk_2` FOREIGN KEY (`customer_id`) REFERENCES `customer` (`email`) ON DELETE CASCADE ON UPDATE CASCADE,
+ CONSTRAINT `quote_ibfk_3` FOREIGN KEY (`project_id`) REFERENCES `project` (`project_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+CREATE TABLE `review` (
+ `review_id` int(11) NOT NULL AUTO_INCREMENT,
+ `user_id` varchar(32) NOT NULL,
+ `reviewer_id` varchar(32) NOT NULL,
+ `rating` int(11) NOT NULL,
+ `comment` varchar(128) NOT NULL,
+ PRIMARY KEY (`review_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4
+
+
+CREATE TABLE `room` (
+ `room_id` int(11) NOT NULL AUTO_INCREMENT,
+ `project_id` int(11) NOT NULL,
+ `title` varchar(16) NOT NULL,
+ `width` decimal(5,2) NOT NULL,
+ `length` decimal(5,2) NOT NULL,
+ `wall_prep` varchar(16) NOT NULL,
+ `ceiling` tinyint(1) NOT NULL,
+ `wall_work` varchar(16) NOT NULL,
+ PRIMARY KEY (`room_id`),
+ KEY `FK` (`project_id`),
+ CONSTRAINT `room_ibfk_1` FOREIGN KEY (`project_id`) REFERENCES `project` (`project_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=55 DEFAULT CHARSET=utf8mb4
+
+
+CREATE TABLE `woodwork` (
+ `room_id` int(11) NOT NULL,
+ `current_state` varchar(8) NOT NULL,
+ `desired_finish` varchar(8) NOT NULL,
+ KEY `FK` (`room_id`),
+ CONSTRAINT `woodwork_ibfk_1` FOREIGN KEY (`room_id`) REFERENCES `room` (`room_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4

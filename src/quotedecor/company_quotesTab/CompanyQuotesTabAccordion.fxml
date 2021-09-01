@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+
+<ScrollPane maxHeight="-Infinity" maxWidth="1200" prefHeight="470.0" prefWidth="1170.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="quotedecor.company_quotesTab.CompanyQuotesTabAccordionCtrl">
+    <content>
+        <Accordion fx:id="accordion" maxWidth="1.7976931348623157E308" prefWidth="1170.0">
+            <panes>
+
+            </panes>
+        </Accordion>
+    </content>
+</ScrollPane>
